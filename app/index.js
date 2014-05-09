@@ -42,7 +42,7 @@ var NordBackboneGenerator = yeoman.generators.Base.extend({
     this.prompt(prompts, function (props) {
       this.appName = this._.camelize(props.appName);
       this.appDir = props.appDir;
-      this.appPath = path.resolve(path.join(this.appDir, this.appName));
+      this.appPath = path.join(this.appDir, this.appName);
       this.webRoot = props.webRoot;
 
       done();
