@@ -24,7 +24,7 @@ define([
         /**
          * Creates a new view.
          * @param {string} className the view to create
-         * @param {Object} args view options
+         * @param {Object} viewArgs view options
          */
         createView: function(className, viewArgs) {
             var self = this,
@@ -35,8 +35,7 @@ define([
                 view.undelegateEvents();
             }
 
-            this.loader
-                .load(className)
+            this.loader.load(className)
                 .then(function(Constructor) {
                     viewArgs.manager = self;
                     view = new Constructor(viewArgs);
