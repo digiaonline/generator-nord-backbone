@@ -1,0 +1,7 @@
+language: node_js
+node_js:
+  - '0.10'
+before_install:
+  - currentfolder=${PWD##*/}
+  - if [ "$currentfolder" != 'generator-nord-backbone' ]; then cd .. && eval "mv $currentfolder generator-nord-backbone" && cd generator-nord-backbone; fi
+
