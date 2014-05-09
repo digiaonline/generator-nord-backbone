@@ -1,13 +1,14 @@
 {
   "name": "generator-nord-backbone",
-  "version": "0.1.0",
+  "version": "0.1.7",
   "description": "Yeoman generator",
   "license": "BSD-3-Clause",
   "repository": "nordsoftware/generator-nord-backbone",
+  "main": "app/index.js",
   "author": {
-    "name": "Nord Software",
-    "email": "",
-    "url": "https://github.com/nordsoftware"
+    "name": "Christoffer Niska",
+    "email": "christoffer.niska@nordsoftware.com",
+    "url": "https://crisu83.me"
   },
   "engines": {
     "node": ">=0.10.0"
