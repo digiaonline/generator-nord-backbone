@@ -1,10 +1,8 @@
 'use strict';
 
-var util = require('util');
-var path = require('path');
-var yeoman = require('yeoman-generator');
-var chalk = require('chalk');
-var process = require('child_process');
+var path = require('path'),
+    yeoman = require('yeoman-generator'),
+    chalk = require('chalk');
 
 var NordBackboneGenerator = yeoman.generators.Base.extend({
   init: function () {
@@ -37,7 +35,7 @@ var NordBackboneGenerator = yeoman.generators.Base.extend({
       },
       {
         name: 'webRoot',
-        message: 'Where is your web root located?'      
+        message: 'Where is your web root located?'
       }
     ];
 
@@ -72,10 +70,10 @@ var NordBackboneGenerator = yeoman.generators.Base.extend({
       '_package.json': 'package.json',
       '_bower.json': 'bower.json',
       '_Gruntfile.js': 'Gruntfile.js'
-    }
-      
+    };
+    
     for (prop in filesToCopy) {
-        this.copy(prop, filesToCopy[prop]);
+      this.copy(prop, filesToCopy[prop]);
     }
       
     templatesToWrite = {
@@ -84,10 +82,10 @@ var NordBackboneGenerator = yeoman.generators.Base.extend({
       'core/component.js': path.join(this.appPath, 'core', 'component.js'),
       'components/viewManager.js': path.join(this.appPath, 'components', 'viewManager.js'),
       'core/app.js': path.join(this.appPath, 'core', 'app.js'),
-    }
+    };
     
     for (prop in templatesToWrite) {
-        this.template(prop, templatesToWrite[prop], { appName: this.appName });
+      this.template(prop, templatesToWrite[prop], { appName: this.appName });
     }
     
     this.config.set('appName', this.appName);
