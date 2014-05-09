@@ -2,7 +2,7 @@
 var util = require('util'),
     yeoman = require('yeoman-generator');
 
-var GeneratorBase = module.exports = yeoman.generators.NamedBase.extend({
+var GeneratorBase = yeoman.generators.NamedBase.extend({
   constructor: function(args, options) {
     yeoman.generators.NamedBase.apply(this, arguments);
     
@@ -15,3 +15,5 @@ var GeneratorBase = module.exports = yeoman.generators.NamedBase.extend({
       this.template(source, destination, this._.extend(data, { appName: this.appName }));
   }
 });
+
+module.exports = GeneratorBase;

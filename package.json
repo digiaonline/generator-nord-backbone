@@ -1,6 +1,6 @@
 {
   "name": "generator-nord-backbone",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Yeoman generator",
   "license": "BSD-3-Clause",
   "repository": "nordsoftware/generator-nord-backbone",
