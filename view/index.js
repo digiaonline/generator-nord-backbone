@@ -1,12 +1,11 @@
 'use strict';
 
 var path = require('path'),
-    util = require('util'),
     GeneratorBase = require('../generator-base'),
     generatorUtils = require('../util');
 
 var ViewGenerator = GeneratorBase.extend({
-  init: function () 
+  init: function () {
     this._.camelize(this.name);
   },
     
