@@ -1,6 +1,6 @@
 'use strict';
-var util = require('util'),
-    path = require('path'),
+
+var path = require('path'),
     GeneratorBase = require('../generator-base'),
     generatorUtils = require('../util');
 
