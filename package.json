@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "description": "Yeoman generator",
   "license": "BSD-3-Clause",
-  "main": "app/index.js",
   "repository": "nordsoftware/generator-nord-backbone",
   "author": {
     "name": "Nord Software",
@@ -16,11 +15,6 @@
   "scripts": {
     "test": "mocha"
   },
-  "files": [
-    "app",
-    "component",
-    "view"
-  ],
   "keywords": [
     "yeoman-generator"
   ],
