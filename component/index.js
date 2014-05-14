@@ -2,7 +2,7 @@
 
 var path = require('path'),
     GeneratorBase = require('../generator-base'),
-    generatorUtils = require('../util');
+    generatorUtil = require('../generator-util');
 
 var ComponentGenerator = GeneratorBase.extend({
   init: function () {
@@ -11,7 +11,7 @@ var ComponentGenerator = GeneratorBase.extend({
     
   files: function () {
     this.writeTemplateFile('../../templates/component.js', path.join(this.appPath, 'components', this.name + '.js'), {
-        className: generatorUtils.classify(this.name)
+        className: generatorUtil.classify(this.name)
     });
   }
 });
