@@ -2,7 +2,7 @@
 
 var path = require('path'),
     GeneratorBase = require('../generator-base'),
-    generatorUtils = require('../util');
+    generatorUtil = require('../generator-util');
 
 var ViewGenerator = GeneratorBase.extend({
   init: function () {
@@ -11,7 +11,7 @@ var ViewGenerator = GeneratorBase.extend({
     
   files: function () {   
     this.writeTemplateFile('../../templates/view.js', path.join(this.appPath, 'views', this.name + '.js'), {
-        className: generatorUtils.classify(this.name + 'View')
+        className: generatorUtil.classify(this.name + 'View')
     });
   }
 });
